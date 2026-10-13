@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Obtenha uma estimativa indicativa do valor da sua casa com Susana Freire, A Sua Consultora.">
+<title>Quanto vale a sua casa? | Susana Freire</title>
+<style>
+:root{--cream:#f7f3eb;--paper:#fffdf8;--ink:#171717;--gold:#b89a5a;--muted:#6c685f;--line:#e5ddcf}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+header{padding:22px 18px;border-bottom:1px solid var(--line);background:var(--paper)}.brand{max-width:960px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand-name{font-family:Georgia,serif;font-size:21px;letter-spacing:.2px}.brand-sub{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}.phone{color:var(--ink);font-size:14px;text-decoration:none;white-space:nowrap}
+main{max-width:960px;margin:0 auto;padding:34px 18px 54px}.hero{max-width:760px;margin:0 auto 28px;text-align:center}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#8c713d;font-weight:bold}.hero h1{font-family:Georgia,serif;font-size:clamp(32px,6vw,52px);line-height:1.08;font-weight:normal;margin:12px 0}.hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:17px}
+.layout{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 10px 30px #17171708}.panel h2{font-family:Georgia,serif;font-size:24px;font-weight:normal;margin:0 0 18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:13px;font-weight:bold}input,select{font:inherit;padding:12px 11px;border:1px solid #d8d0c3;border-radius:9px;background:white;color:var(--ink);width:100%;min-height:46px}input:focus,select:focus{outline:2px solid #b89a5a55;border-color:var(--gold)}.hint{font-size:12px;color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:9px;padding:14px 18px;font-weight:bold;font-size:15px;cursor:pointer;text-decoration:none}.btn-gold{background:var(--gold);color:#171717;width:100%;margin-top:18px}.btn-dark{background:var(--ink);color:white;width:100%;margin-top:12px}.result{background:#f1eadc;border:1px solid #dfd0b2;border-radius:14px;padding:20px;margin-top:18px}.result-label{font-size:12px;text-transform:uppercase;letter-spacing:1.4px;color:#6e572b}.range{font-family:Georgia,serif;font-size:clamp(25px,4vw,35px);line-height:1.2;margin:8px 0 4px}.price-m2{font-size:14px;color:var(--muted)}.result p{font-size:13px;color:#514b40;margin-bottom:0}.side-note{color:var(--muted);font-size:14px}.side-note strong{color:var(--ink)}.steps{display:grid;gap:14px;margin-top:20px}.step{display:flex;gap:12px;align-items:flex-start}.num{width:29px;height:29px;flex:0 0 29px;border-radius:50%;display:grid;place-items:center;background:#eee4d1;color:#765e2e;font-weight:bold}.step p{margin:0;font-size:14px}.lead{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}.check{display:flex;gap:9px;align-items:flex-start;font-size:12px;color:var(--muted);margin-top:12px}.check input{width:16px;min-height:16px;margin-top:2px;flex:0 0 16px}.hidden{display:none!important}footer{border-top:1px solid var(--line);padding:22px 18px;color:var(--muted);font-size:12px}footer div{max-width:960px;margin:auto}footer a{color:inherit}.notice{font-size:12px;color:var(--muted);margin-top:18px}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.panel{padding:19px}.grid{grid-template-columns:1fr 1fr}.brand{align-items:flex-start;flex-direction:column;gap:5px}.phone{margin-top:5px}.hero{text-align:left}.hero p{margin:0}.hero h1{font-size:38px}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div><div class="brand-name">Susana Freire</div><div class="brand-sub">A Sua Consultora · Century 21</div></div><a class="phone" href="tel:+351962323123">962 323 123</a></div></header>
+<main>
+<section class="hero"><div class="eyebrow">Simulador imobiliário</div><h1>Quanto poderá valer a sua casa?</h1><p>Responda a algumas perguntas e receba imediatamente uma estimativa indicativa com base numa referência de preços anunciados na sua zona.</p></section>
+<div class="layout">
+<section class="panel">
+<h2>Conte-me um pouco sobre o imóvel</h2>
+<form id="estimateForm">
+<div class="grid">
+<div class="field full"><label for="area">Zona do imóvel</label><select id="area" required><option value="">Selecione a zona</option><option value="sintra">Sintra e concelho</option><option value="oeiras">Oeiras e concelho</option><option value="lisboa">Lisboa (município)</option></select><span class="hint">A cobertura inicial inclui estas zonas; outras localizações podem ser analisadas numa avaliação personalizada.</span></div>
+<div class="field"><label for="type">Tipo de imóvel</label><select id="type" required><option value="apartment">Apartamento</option><option value="house">Moradia</option></select></div>
+<div class="field"><label for="beds">Tipologia</label><select id="beds" required><option value="0">T0</option><option value="1">T1</option><option value="2" selected>T2</option><option value="3">T3</option><option value="4">T4 ou superior</option></select></div>
+<div class="field"><label for="sqm">Área bruta privativa (m²)</label><input id="sqm" type="number" min="15" max="1000" step="1" placeholder="Ex.: 100" required><span class="hint">Consulte a caderneta predial, se tiver dúvidas.</span></div>
+<div class="field"><label for="condition">Estado de conservação</label><select id="condition"><option value="0.90">A necessitar de obras</option><option value="0.97">Habitável, a precisar de melhorias</option><option value="1" selected>Bom estado</option><option value="1.08">Remodelado / excelente estado</option><option value="1.13">Construção recente</option></select></div>
+<div class="field"><label for="outside">Espaço exterior</label><select id="outside"><option value="1">Sem espaço exterior</option><option value="1.03">Varanda</option><option value="1.06">Terraço ou jardim</option></select></div>
+<div class="field"><label for="parking">Estacionamento</label><select id="parking"><option value="1">Não</option><option value="1.03">Lugar de garagem</option><option value="1.05">Garagem fechada / 2 lugares</option></select></div>
+<div class="field"><label for="lift">Elevador (apartamento)</label><select id="lift"><option value="1">Não aplicável / não</option><option value="1.02">Sim</option></select></div>
+<div class="field full"><label for="timing">Quando pensa vender?</label><select id="timing"><option>Nos próximos 3 meses</option><option>Dentro de 3 a 6 meses</option><option>Daqui a mais de 6 meses</option><option>Estou apenas a informar-me</option></select></div>
+</div>
+<button class="btn btn-gold" type="submit">Calcular a estimativa</button>
+</form>
+<div id="result" class="result hidden" aria-live="polite">
+<div class="result-label">Estimativa indicativa</div><div class="range" id="range">—</div><div class="price-m2" id="perSqm"></div>
+<p id="resultExplain"></p>
+<div class="lead">
+<h2 style="font-size:20px;margin-bottom:8px">Quer afinar esta estimativa?</h2>
+<p class="side-note">Posso analisar características específicas e imóveis comparáveis para preparar uma avaliação personalizada.</p>
+<div class="grid" style="margin-top:12px">
+<div class="field"><label for="name">O seu nome (opcional)</label><input id="name" autocomplete="name" placeholder="Nome"></div>
+<div class="field"><label for="contact">Telefone (opcional)</label><input id="contact" autocomplete="tel" inputmode="tel" placeholder="Telemóvel"></div>
+</div>
+<label class="check"><input id="consent" type="checkbox"><span>Autorizo a Susana Freire a utilizar os dados que introduzi para responder ao meu pedido de avaliação personalizada. Compreendo que os dados serão enviados apenas quando abrir e enviar a mensagem no WhatsApp. Não autorizo comunicações de marketing futuras por esta via.</span></label>
+<button id="whatsapp" class="btn btn-dark" type="button">Pedir avaliação personalizada por WhatsApp</button>
+</div>
+</div>
+</section>
+<aside class="panel">
+<h2>Uma primeira referência. Não uma promessa.</h2>
+<p class="side-note">O valor de uma casa depende da localização exata, estado, área, piso, luz, eficiência energética, procura e imóveis concorrentes.</p>
+<div class="steps">
+<div class="step"><div class="num">1</div><p><strong>Preencha os dados</strong><br>Leva cerca de um minuto.</p></div>
+<div class="step"><div class="num">2</div><p><strong>Veja a estimativa</strong><br>O resultado aparece imediatamente, sem ter de deixar o seu contacto.</p></div>
+<div class="step"><div class="num">3</div><p><strong>Se quiser, falamos</strong><br>Peça uma análise personalizada, sem compromisso.</p></div>
+</div>
+<p class="notice">A estimativa é automática e meramente indicativa. Não constitui avaliação certificada, aconselhamento financeiro nem garantia do preço de venda. O cálculo usa referências de preços anunciados por m² e fatores de ajuste simplificados; os preços anunciados não são necessariamente os preços finais de transação.</p>
+</aside>
+</div>
+</main>
+<footer><div><strong>Susana Freire · A Sua Consultora</strong> · <a href="tel:+351962323123">962 323 123</a> · <a href="mailto:susanafreire@century21.pt">susanafreire@century21.pt</a><br><br>Referências de mercado consultadas para setembro de 2026: <a href="https://www.idealista.pt/media/relatorios-preco-habitacao/venda/lisboa-provincias/sintra/" target="_blank" rel="noopener">Sintra — idealista</a>; <a href="https://supercasa.pt/relatorio-precos/venda/casas/oeiras" target="_blank" rel="noopener">Oeiras — SUPERCASA</a>; <a href="https://www.idealista.pt/media/relatorios-preco-habitacao/venda/report/" target="_blank" rel="noopener">Lisboa — idealista</a>.<br>Esta página não utiliza cookies analíticos nem guarda os dados introduzidos num servidor. Para publicar, reveja a informação de privacidade do seu site e confirme a utilização destes indicadores.</div></footer>
+<script>
+const market = {
+  sintra: { label: "Sintra e concelho", euro: 3575, source: "idealista, setembro de 2026", url: "https://www.idealista.pt/media/relatorios-preco-habitacao/venda/lisboa-provincias/sintra/" },
+  oeiras: { label: "Oeiras e concelho", euro: 5128, source: "SUPERCASA, setembro de 2026", url: "https://supercasa.pt/relatorio-precos/venda/casas/oeiras" },
+  lisboa: { label: "Lisboa (município)", euro: 6256, source: "idealista, setembro de 2026", url: "https://www.idealista.pt/media/relatorios-preco-habitacao/venda/report/" }
+};
+const money = n => new Intl.NumberFormat('pt-PT',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
+let lastEstimate = null;
+document.getElementById('estimateForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const areaKey = document.getElementById('area').value;
+  const sqm = Number(document.getElementById('sqm').value);
+  if(!market[areaKey] || !Number.isFinite(sqm) || sqm < 15 || sqm > 1000){ alert('Confirme a zona e introduza uma área entre 15 e 1.000 m².'); return; }
+  const zone = market[areaKey];
+  const typeFactor = document.getElementById('type').value === 'house' ? 1.06 : 1;
+  const condition = Number(document.getElementById('condition').value);
+  const outside = Number(document.getElementById('outside').value);
+  const parking = Number(document.getElementById('parking').value);
+  const lift = document.getElementById('type').value === 'apartment' ? Number(document.getElementById('lift').value) : 1;
+  const typology = Number(document.getElementById('beds').value);
+  const typologyFactor = typology === 0 ? 0.94 : typology === 1 ? 0.97 : typology === 2 ? 1 : typology === 3 ? 1.02 : 1.04;
+  const base = zone.euro * sqm * typeFactor * condition * outside * parking * lift * typologyFactor;
+  const low = Math.round(base * 0.90 / 1000) * 1000;
+  const high = Math.round(base * 1.10 / 1000) * 1000;
+  lastEstimate = {zone, sqm, low, high, mid:base, type:document.getElementById('type').value, beds:typology, timing:document.getElementById('timing').value};
+  document.getElementById('range').textContent = money(low) + ' – ' + money(high);
+  document.getElementById('perSqm').textContent = 'Referência ajustada: cerca de ' + money(base/sqm) + '/m² · ' + zone.label;
+  document.getElementById('resultExplain').textContent = 'Cálculo indicativo a partir de uma referência de ' + money(zone.euro) + '/m² (' + zone.source + '), com ajustes simplificados para as características indicadas. A faixa apresentada é uma margem de simulação, não um intervalo estatístico validado.';
+  document.getElementById('result').classList.remove('hidden');
+  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+document.getElementById('whatsapp').addEventListener('click', function(){
+  if(!lastEstimate){alert('Calcule primeiro a estimativa.');return;}
+  if(!document.getElementById('consent').checked){alert('Para enviar o pedido, confirme a autorização de utilização dos dados.');return;}
+  const name = document.getElementById('name').value.trim();
+  const contact = document.getElementById('contact').value.trim();
+  const t = lastEstimate.type === 'house' ? 'Moradia' : 'Apartamento';
+  const typ = lastEstimate.beds === 4 ? 'T4+' : 'T'+lastEstimate.beds;
+  const msg = 'Olá Susana, gostaria de pedir uma avaliação personalizada do meu imóvel.%0A%0A' +
+    'Nome: ' + encodeURIComponent(name || 'Não indicado') + '%0A' +
+    'Telefone: ' + encodeURIComponent(contact || 'Não indicado') + '%0A' +
+    'Zona: ' + encodeURIComponent(lastEstimate.zone.label) + '%0A' +
+    'Imóvel: ' + encodeURIComponent(t + ' ' + typ + ', ' + lastEstimate.sqm + ' m²') + '%0A' +
+    'Estimativa indicativa: ' + encodeURIComponent(money(lastEstimate.low) + ' – ' + money(lastEstimate.high)) + '%0A' +
+    'Prazo de venda: ' + encodeURIComponent(lastEstimate.timing);
+  window.open('https://wa.me/351962323123?text=' + msg, '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
