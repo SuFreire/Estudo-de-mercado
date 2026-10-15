@@ -16,7 +16,15 @@ main{max-width:960px;margin:0 auto;padding:34px 18px 54px}.hero{max-width:760px;
 </style>
 </head>
 <body>
-<header><div class="brand"><div><div class="brand-name">Susana Freire</div><div class="brand-sub">A Sua Consultora · Century 21</div></div><a class="phone" href="tel:+351962323123">962 323 123</a></div></header>
+<header>
+  <div class="brand">
+    <div>
+      <div class="brand-name">Susana Freire</div>
+      <div class="brand-sub">A Sua Consultora</div>
+    </div>
+    <a href="tel:+351962323123" style="background:#b89a5a;color:#171717;padding:8px 16px;border-radius:8px;font-weight:bold;text-decoration:none;font-size:14px;">962 323 123</a>
+  </div>
+</header>
 <main>
 <section class="hero"><div class="eyebrow">Simulador imobiliário</div><h1>Quanto poderá valer a sua casa?</h1><p>Responda a algumas perguntas e receba imediatamente uma estimativa indicativa com base numa referência de preços anunciados na sua zona.</p></section>
 <div class="layout">
@@ -24,7 +32,7 @@ main{max-width:960px;margin:0 auto;padding:34px 18px 54px}.hero{max-width:760px;
 <h2>Conte-me um pouco sobre o imóvel</h2>
 <form id="estimateForm">
 <div class="grid">
-<div class="field full"><label for="area">Zona do imóvel</label><select id="area" required><option value="">Selecione a zona</option><option value="sintra">Sintra e concelho</option><option value="oeiras">Oeiras e concelho</option><option value="lisboa">Lisboa (município)</option></select><span class="hint">A cobertura inicial inclui estas zonas; outras localizações podem ser analisadas numa avaliação personalizada.</span></div>
+<div class="field full"><label for="area">Zona do imóvel</label><select id="area" required><option value="">Selecione a zona</option><option value="sintra">Sintra e concelho</option><option value="oeiras">Oeiras e concelho</option><option value="amadora">Amadora</option><option value="loures">Loures</option><option value="odivelas">Odivelas</option></select><span class="hint">A cobertura inicial inclui estas zonas; outras localizações podem ser analisadas numa avaliação personalizada.</span></div>
 <div class="field"><label for="type">Tipo de imóvel</label><select id="type" required><option value="apartment">Apartamento</option><option value="house">Moradia</option></select></div>
 <div class="field"><label for="beds">Tipologia</label><select id="beds" required><option value="0">T0</option><option value="1">T1</option><option value="2" selected>T2</option><option value="3">T3</option><option value="4">T4 ou superior</option></select></div>
 <div class="field"><label for="sqm">Área bruta privativa (m²)</label><input id="sqm" type="number" min="15" max="1000" step="1" placeholder="Ex.: 100" required><span class="hint">Consulte a caderneta predial, se tiver dúvidas.</span></div>
@@ -63,12 +71,14 @@ main{max-width:960px;margin:0 auto;padding:34px 18px 54px}.hero{max-width:760px;
 </aside>
 </div>
 </main>
-<footer><div><strong>Susana Freire · A Sua Consultora</strong> · <a href="tel:+351962323123">962 323 123</a> · <a href="mailto:susanafreire@century21.pt">susanafreire@century21.pt</a><br><br>Referências de mercado consultadas para setembro de 2026: <a href="https://www.idealista.pt/media/relatorios-preco-habitacao/venda/lisboa-provincias/sintra/" target="_blank" rel="noopener">Sintra — idealista</a>; <a href="https://supercasa.pt/relatorio-precos/venda/casas/oeiras" target="_blank" rel="noopener">Oeiras — SUPERCASA</a>; <a href="https://www.idealista.pt/media/relatorios-preco-habitacao/venda/report/" target="_blank" rel="noopener">Lisboa — idealista</a>.<br>Esta página não utiliza cookies analíticos nem guarda os dados introduzidos num servidor. Para publicar, reveja a informação de privacidade do seu site e confirme a utilização destes indicadores.</div></footer>
+<footer><div><strong>Susana Freire · A Sua Consultora</strong> · <a href="tel:+351962323123">962 323 123</a> · <a href="mailto:susanafreire@century21.pt">susanafreire@century21.pt</a><br><br>Referências de mercado consultadas para setembro de 2026: <a href="https://www.idealista.pt/media/relatorios-preco-habitacao/venda/lisboa-provincias/sintra/" target="_blank" rel="noopener">Sintra — idealista</a>; <a href="https://supercasa.pt/relatorio-precos/venda/casas/oeiras" target="_blank" rel="noopener">Oeiras — SUPERCASA</a>; <a href="https://www.idealista.pt/media/relatorios-preco-habitacao/venda/lisboa-provincias/amadora/" target="_blank" rel="noopener">Amadora — idealista</a>; <a href="https://www.idealista.pt/media/relatorios-preco-habitacao/venda/lisboa-provincias/loures/" target="_blank" rel="noopener">Loures — idealista</a>.<br>Esta página não utiliza cookies analíticos nem guarda os dados introduzidos num servidor. Para publicar, reveja a informação de privacidade do seu site e confirme a utilização destes indicadores.</div></footer>
 <script>
 const market = {
   sintra: { label: "Sintra e concelho", euro: 3575, source: "idealista, setembro de 2026", url: "https://www.idealista.pt/media/relatorios-preco-habitacao/venda/lisboa-provincias/sintra/" },
-  oeiras: { label: "Oeiras e concelho", euro: 5128, source: "SUPERCASA, setembro de 2026", url: "https://supercasa.pt/relatorio-precos/venda/casas/oeiras" },
-  lisboa: { label: "Lisboa (município)", euro: 6256, source: "idealista, setembro de 2026", url: "https://www.idealista.pt/media/relatorios-preco-habitacao/venda/report/" }
+  oeiras: { label: "Oeiras e concelho", euro: 4511, source: "INE, 2º trimestre de 2026", url: "https://www.ine.pt/" },
+  amadora: { label: "Amadora", euro: 3960, source: "idealista, agosto de 2026", url: "https://www.idealista.pt/media/relatorios-preco-habitacao/venda/lisboa-provincias/" },
+  loures: { label: "Loures", euro: 3671, source: "idealista, setembro de 2026", url: "https://www.idealista.pt/media/relatorios-preco-habitacao/venda/lisboa-provincias/loures/" },
+  odivelas: { label: "Odivelas", euro: 4305, source: "Properstar, janeiro de 2026", url: "https://www.properstar.pt/portugal/odivelas-l2-5/huspriser" }
 };
 const money = n => new Intl.NumberFormat('pt-PT',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
 let lastEstimate = null;
